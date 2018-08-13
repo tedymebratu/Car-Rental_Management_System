@@ -1,0 +1,24 @@
+<div ng-include="navBar"></div>
+<ul class="nav" ng-if="links">
+  <li class="nav-item" ng-repeat="link in links">
+    <a class="nav-link" ui-sref-active="active" ng-href="{{link.link}}">{{link.title | titlecase}}</a>
+  </li>
+</ul>
+<main role="main" class="container pt-5" ui-view>
+  <div class="starter-template">
+    <h1>Select your car</h1>
+    <p class="lead">Fairfield Rent Car.</p>
+  </div>
+  <div class="card-columns">
+    <div class="card" style="width: 18rem;" ng-repeat="car in cars">
+      <img class="card-img-top" src="https://loremflickr.com/150/150/car" alt="Car Image">
+      <div class="card-body">
+        <h4 class="card-title">{{car.brand}}</h4>
+        <p class="card-text">Model: {{car.model}}</p>
+        <p class="card-text">Status: {{car.status}}</p>
+        <p class="card-text">Seats: {{car.num_of_seat}}</p>
+        <a href="#" class="btn btn-primary">Select Car</a>
+      </div>
+    </div>
+  </div>
+</main><!-- /.container -->

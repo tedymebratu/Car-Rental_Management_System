@@ -1,0 +1,17 @@
+{
+  "generator-webpack-angularjs": {
+    "app": "client",
+    "module": "car",
+    "services": [
+      "LoginSvc"
+    ],
+    "directives": [
+      "titlecase"
+    ],
+    "states": [
+      "login",
+      "home",
+      "home.new"
+    ]
+  }
+}
